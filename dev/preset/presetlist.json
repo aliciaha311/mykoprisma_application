@@ -1,0 +1,26 @@
+[
+    {
+        "number": 1, "name": "Oyster Mushroom",
+        "tempLow": 62, "tempHigh": 68,
+        "humidLow": 85, "humidHigh": 90,
+        "co2": 800, "light": 16
+    },
+    {
+        "number": 2, "name": "Shiitake Mushroom",
+        "tempLow": 62, "tempHigh": 64,
+        "humidLow": 85, "humidHigh": 90,
+        "co2": 1200, "light": 12
+    },
+    {
+        "number": 3, "name": "Lion's Mane Mushroom",
+        "tempLow": 65, "tempHigh": 75,
+        "humidLow": 85, "humidHigh": 90,
+        "co2": 1000, "light": 12
+    },
+    {
+        "number": 4, "name": "King Oyster Mushroom",
+        "tempLow": 55, "tempHigh": 63,
+        "humidLow": 80, "humidHigh": 90,
+        "co2": 1500, "light": 12
+    }
+]

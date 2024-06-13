@@ -1,0 +1,210 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: linear-gradient(to right, #b05ee0 , #0130ad);
+    background-color: #0130ad;
+    overflow: hidden;
+}
+    
+main {
+    margin-left: 23.6%;
+}
+    
+#navbar {
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 22%;
+    height: 100%;
+}
+    
+/*MycoLogic text*/
+#navbar h2 {
+    font-size: 2.5vw;
+    margin-left: 4%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 11%;
+    width: 90%;
+    height: 15%;
+    border-color: black;
+    border-width: 0.3rem;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+    
+#navbar ul {
+    height: 100%;
+    padding-left: 0;
+}
+    
+#navbar li {
+    color: black;
+    list-style: none;
+    margin-left: 6%;
+    font-size: 1.7vw;
+    position: relative;
+    margin-bottom: 8%;
+}
+    
+#navbar a:hover {
+    background-color: #A4A4A4;
+    color: black;
+}
+    
+#navbar a {
+    display: block;
+    border-radius: 0.3vw;
+    width: 85%;
+    padding: 4%;
+    color: #4a4a4a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title{
+    margin-top: 3.1vh;
+    background-color: white;
+    width: 75vw;
+    height: 13.7vh;
+    border-radius: 1.3vw;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1{
+    font-size: 4.5vh;
+}
+
+.button-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.button-grid h3{
+    font-weight: lighter;
+    font-size: 3.1vh;
+}
+
+
+button {
+    width: 75vw;
+    height: 10vh;
+    background-color: white;
+    border-radius: 1.3vw;
+    margin-top: 3.1vh;
+    border: none;
+}
+
+button:hover {
+    background-color: #ecdaff;
+}
+
+#preset-container{
+    width: 75vw;
+    height: 62vh;
+    background-color: white;
+    border-radius: 1.3vh;
+    margin-top: 3.1vh;
+    padding-top: 2.3vh;
+    position: relative;
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1.7vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 2.6vh;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ecdaff;
+    border-radius: 1.3vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ecdaff; 
+}
+
+#preset-div{
+    background-color: #ecdaff;
+    border-radius: 2.6vw;
+    width: 70.3vw;
+    height: 15.5vh;
+    margin-bottom: 2.3vh;
+    margin-left: 1.2vw;
+    padding-right: 1vw;
+}
+
+.selected{
+    background-color: gray !important;
+    border-radius: 2.6vw;
+    width: 70.3vw;
+    height: 15.5vh;
+}
+
+.preset-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.preset-index-name-grid {
+    display: grid;
+    grid-template-columns: 7.7vh 19.5vw;
+    margin-left: 2.5vw;
+    align-items: center;
+}
+
+#index {
+    font-size: 4.9vh;
+    font-weight: bolder;
+}
+
+#preset-name p {
+    font-size: 1.6vw;
+    font-weight: lighter;
+    width: 30.4vw;
+}
+
+.preset-measurement-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: auto;
+    margin-right: 2.5vw;
+}
+
+#temp-humid-grid{
+    display: grid;
+    grid-template-columns: 20vh auto;
+    align-items: center;
+}
+
+#co2-light-grid{
+    margin-left: 3.9vw;
+    display: grid;
+    grid-template-columns: 1.3vw 15.5vh;
+    align-items: center;
+}
+
+.measurement-label p, .measurement-value p{
+    font-size: 1vw;
+    margin: 0.3vw 0;
+}
+
+.measurement-value{
+    text-align: right;
+}
