@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mykoprisma</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="data:,">
+    </head>
+
+    <body>       
+        <nav id="navbar">
+            <h2>Mykoprisma</h2>
+            <ul>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev">Overview</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/preset">Presets</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/override">Override</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/timelapse">Timelapse</a></li>
+                <img src="" id="logo">
+            </ul>
+        </nav>
+
+        <main id="main-preset">
+            <section class="main-section">
+                <div class="title">
+                    <h1>PRESET SETTINGS</h1>
+                </div>
+                
+                <div class="button-grid">
+                    <button id="set-button"><h3><b>SET</b> <!--EXISTING-->PRESET</h3></button>
+                    <!--
+                    <a href="http://mykoprisma.com/dev/preset/create"><button id="add-button"><h3><b>ADD</b> NEW PRESET</h3></button></a>
+                    -->
+                </div>
+                <div id="preset-container">
+                </div>
+            </section>
+        </main>
+        <script type="module" src ="./preset.js" defer></script>
+    </body>
+</html>
