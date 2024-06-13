@@ -1,0 +1,8 @@
+[
+    {
+        "number": 1, "name": "Oyster Mushroom",
+        "tempLow": 62, "tempHigh": 68,
+        "humidLow": 85, "humidHigh": 90,
+        "co2": 800, "light": 16
+    }
+]

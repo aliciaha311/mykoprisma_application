@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mykoprisma</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    </head>
+
+    <body>      
+        <nav id="navbar">
+            <h2>Mykoprisma</h2>
+            <ul>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev">Overview</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/preset">Presets</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/override">Override</a></li>
+                <li><a class="nav-link" href="http://mykoprisma.com/dev/timelapse">Timelapse</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-measurement">
+            <section class="main-section" id="Overview">
+                <div class="overview-grid">
+                    <div class= "measurement-grid">
+                        <div id="measurement-water-grid">
+                            <div class="temperature-humidity-co2-grid">
+                                <div class = "measurement-container" id="temperature-measurement">
+                                    <h3>TEMPERATURE</h3>
+                                    <span id = "temperature">OFFLINE</span>
+                                    <p id="desiredTemp">Not Set</p>
+                                </div>
+                                <div class="humidity-co2-measurement-grid">
+                                    <div class = "measurement-container" id="humidity-measurement">
+                                        <h3>HUMIDITY</h3>
+                                        <span id = "humidity">OFFLINE</span>
+                                        <p id="desiredHumid">Not Set</p>
+                                    </div>
+                                    <div class = "measurement-container" id="co2-measurement">
+                                        <h3>CO<sub>2</sub> LEVEL</h3>
+                                        <span id = "co2">OFFLINE</span>
+                                        <p id="desiredCO2">Not Set</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="water-level-container">
+                                <h3>WATER LEVEL</h3>
+                                <p id="water-level-percentage">88%</p>
+                                <div class="water-level" id="level5"></div>
+                                <div class="water-level" id="level4"></div>
+                                <div class="water-level" id="level3"></div>
+                                <div class="water-level" id="level2"></div>
+                                <div class="water-level" id="level1"></div>
+                            </div>
+                        </div>
+                        <div id="camera-update-button-grid">
+                            <div id = "camera-container">
+                                <img id="latest-image" src="uploads/newest.jpg" alt="Camera Image" width="100%" height="100%">
+                            </div>
+                            <div id="button-grid">
+                                <div id="csv-button-container">
+                                    <button id="csv-button" onclick="download()">Download CSV</button>
+                                </div>
+                                <div id="update-button-container">
+                                    <p>Refresh Rate</p>
+                                    <input type="number" id="refresh-rate">
+                                    <label for="refresh-rate">second(s)</label>
+                                    <button id="change-refresh" onclick="setRefreshRate()">CHANGE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title-and-chart-grid">
+                        <div id="mushroom-type-div">
+                            <h2 id="mushroom-type">Overview</h2>
+                        </div>
+                        <div class = "chart-grid">
+                            <select id="timeRange" onchange="createChart()">
+                                <option value="3600">Past Hour</option>
+                                <option value="86400" selected>Past 24 Hours</option>
+                                <option value="172800">Past 48 Hours</option>
+                                <option value="604800">Past Week</option>
+                                <option value="2592000">Past Month</option>
+                            </select>
+                            
+                            <div class="actuator-status-container" id="light-status">
+                                <p>Actuator 3 (Blue Light) Status: <span id = "actuator3Status">--</span> / Actuator 5 (UV Light) Status: <span id = "actuator5Status">--</span></p>
+                            </div>
+                            <div class= "chart-container">
+                                <canvas id="temperatureChart" height="150%"></canvas>
+                            </div>
+                            <div class="actuator-status-container">
+                                <p>Actuator 4 (Heater) Status: <span id = "actuator2Status">--</span></p>
+                            </div>
+                            <div class = "chart-container">
+                                <canvas id="humidityChart" height="150%"></canvas>
+                            </div>
+                            <div class="actuator-status-container">
+                                <p>Actuator 1 (Atomizer) Status: <span id = "actuator1Status">--</span></p>
+                            </div>
+                            <div class = "chart-container">
+                                <canvas id="co2Chart" height="150%"></canvas>
+                            </div>
+                            <div class="actuator-status-container">
+                                <p>Actuator 2 (Fan) Status: <span id="actuator4Status">--</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src ="./dataproc.js"></script> 
+        <script src ="./setpreset.js"></script>
+        <script src="./downloadcsv.js"></script>
+        <script src="./createchart.js"></script>
+    </body>
+</html>

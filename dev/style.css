@@ -1,0 +1,403 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: linear-gradient(to right, #b05ee0 , #0130ad);
+  background-color: #0130ad;
+  overflow: hidden;
+}
+
+main {
+  margin-left: 23.6%;
+}
+
+#navbar {
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 22%;
+  height: 100%;
+}
+
+/*MycoLogic text*/
+#navbar h2 {
+  font-size: 2.5vw;
+  margin-left: 4%;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 11%;
+  width: 90%;
+  height: 15%;
+  border-color: black;
+  border-width: 0.3rem;
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+#navbar ul {
+  height: 100%;
+  padding-left: 0;
+}
+
+#navbar li {
+  color: black;
+  list-style: none;
+  margin-left: 6%;
+  font-size: 1.7vw;
+  position: relative;
+  margin-bottom: 8%;
+}
+
+#navbar a:hover {
+  background-color: #A4A4A4;
+  color: black;
+}
+
+#navbar a {
+  display: block;
+  border-radius: 0.3vw;
+  width: 85%;
+  padding: 4%;
+  color: #4a4a4a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 2.2vh;
+}
+
+#measurement-water-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.measurement-container {
+  background-color: white;
+  border-radius: 1.3vw;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.measurement-container h3 {
+  font-size: 1.4vw;
+  margin-bottom: 5.3vh;
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 3.5vh;
+}
+
+#co2-measurement h3 {
+  margin-bottom: 4.6vh !important;
+}
+
+/*replace with span later*/
+.measurement-container span {
+  font-size: 2.2vw;
+}
+
+.measurement-container p {
+  margin-top: 5.2vh;
+  font-size: 1.7vh;
+  font-size: lighter;
+}
+
+#temperature, #humidity, #co2 {
+  font-weight: bolder;
+}
+
+#temperature-measurement{
+  width: 27.4vw;
+  height: 27.2vh;
+  overflow: hidden;
+}
+
+.humidity-co2-measurement-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#humidity-measurement, #co2-measurement{
+  width: 13.2vw;
+  height: 27.2vh;
+}
+
+/*water level*/
+.water-level-container{
+  width: 7.7vw;
+  height: 56.2vh;
+  background-color: white;
+  border-radius: 1.3vw;
+}
+
+.water-level-container h3 {
+  font-size: 1.3vw;
+  margin-top: 2.4vh;
+  font-weight: lighter;
+  text-align: center;
+}
+
+#water-level-percentage{
+  text-align: center;
+  margin-bottom: 2.5vh;
+  font-size: 1vw;
+  margin-top: -1.3vh;
+}
+
+.water-level{
+  background-color: #5C4FC8;
+  border-radius: 1.3vw;
+  width: 6vw;
+  height: 6.5vh;
+  margin: auto auto 1.7vh;
+}
+
+/*camera and toggle buttons grid*/
+#camera-update-button-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#camera-container {
+  background-color: white;
+  border-radius: 0.3vw;
+  /*width: 23.7vw;*/
+  width: calc(36.9vh * 4/3);
+  height: 36.9vh;
+}
+
+#camera-container p {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+#update-button-container{
+  position: relative;
+  display: inline-block;
+  width: calc(36vw - (36.9vh * 4/3));
+  height: 20vh;
+  background-color: white;
+  border-radius: 1.5vw;
+  text-align: center;
+  align-items: center;
+}
+
+#update-button-container p {
+  margin-bottom: 3vh;
+}
+
+/*note to self - make the update camera area look better :<*/
+#change-refresh{
+  border-radius: 1.5vw;
+  border: none;
+  font-size: 1.3vw;
+  overflow: visible;
+  font-weight: lighter;
+  padding-left: 1.2vw;
+  padding-right: 1.2vw;
+  padding-top: 1.2vh;
+  padding-bottom: 1.2vh;
+  margin-top: 2.5vh;
+}
+
+#refresh-rate {
+  width: 15%;
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#csv-button{
+  width: calc(36vw - (36.9vh * 4/3));
+  height: 15vh;
+  margin-bottom: 2vh;
+  border-radius: 1.5vw;
+  border: none;
+  font-size: 1.5vw;
+  overflow: visible;
+  font-weight: lighter;
+}
+
+button:hover {
+  background-color: #ecdaff;
+}
+
+/*override css*/
+
+/*container with toggle containers and icons next to it*/
+#icon-toggle-container{
+  background-color: white;
+  width: calc(540px - (36.9vh * 4/3));
+  height: 36.9vh;
+  border-radius: 1.3vw;
+  align-items: center;
+  text-align: center;
+}
+
+/*puts items and toggle buttons as a grid*/
+#icon-toggle-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/*for image icons*/
+#toggle-button-icons{
+  text-align: center;
+  align-items: center;
+}
+
+#toggle-button-icons img{
+  width: 46px;
+  height: 46px;
+}
+
+#brightness-icon{
+  margin-top: 2.4vh;
+}
+
+#humidity-icon{
+  margin-top: 2.0vh;
+}
+
+#temperature-icon{
+  margin-top: 1.6vh;
+}
+
+#fan-icon{
+  margin-top: 1.9vh;
+}
+
+/*toggle button starts here*/
+#icon-toggle-container .switch{
+  margin-top: 15px;
+  margin-left: -15px;
+}
+
+/*toggle button creation*/
+/*Source: https://www.w3schools.com/howto/howto_css_switch.asp*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: calc(30.2vw - (36.9vh * 4/3));
+  height: 6.8vh;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 42px;
+  width: 42px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #5C4FC8;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #5C4FC8;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(42px);
+  transform: translateX(42px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 2.6vw;
+}
+
+.slider.round:before {
+  border-radius: 2.6vw;
+}
+
+/*override ends*/
+
+.title-and-chart-grid{
+  margin-left: 0.5vw;
+}
+
+/*ex. Oyster Mushroom*/
+#mushroom-type-div {
+  background-color: white;
+  border-radius: 1.3vw;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 9.5vh;
+  width: 37.1vw;
+  display: flex;
+  flex-direction: column; /* Set flex direction to column */
+  margin-bottom: 16px;
+}
+
+#mushroom-type-div h2 {
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+/*containers with line charts*/
+.chart-grid {
+  background-color: white;
+  width: 37.1vw;
+  height: 83.8vh;
+  border-radius: 0.7vw;
+}
+
+.chart-container {
+  margin-left: 2.2vh;
+  margin-right: 2.2vh;
+  background-color: #FAF5FF;
+}
+
+.chart-container canvas {
+  height: 19.8vh;
+  width: 34vw;
+}
+
+.actuator-status-container {
+  text-align: center;
+  align-items: center;
+}
+
+#light-status{
+  margin-top: -1vh;
+}
+
+.actuator-status-container p {
+  font-size: 1.8vh;
+  font-weight: lighter;
+}
