@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> mykoprisma</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Place your logo image here -->
+            <img src="/assets/tri_logo.png" alt="Logo" style="max-width: 200px;">
+        </div>
+        <h1>mykoprimsa</h1>
+        <p>changing the mushroom cultivation game</p>
+    </header>
+
+    <div class="container">
+        <section id="about-us">
+            <h2>About Us</h2>
+            <img src="/assets/in_action2.jpg" align="right" class="center" style="width:32%">
+            <p>Mykoprisma is creating an autonomous mushroom-growing device that maintains ideal conditions for mushroom cultivation, making it accessible to growers of all skill levels.</p>
+            <p>This project benefits users by creating healthy, cheap, and nutritious food while also being environmentally beneficial by removing the carbon cost of growing mushrooms elsewhere and transporting them to consumers.</p>
+            <p>At the present time, there are a few options on the market that serve this purpose. Mykoprisma containers will create and maintain an optimal environment for mushroom growing in an enclosure small enough to fit on a countertop.</p>
+        </section>
+
+        <section id="demo-photos">
+            <h2>Current Working Prototype</h2>
+            <div class="row">
+                <div class="column">
+                    <img src="/assets/box.jpg"  style="width:93%">
+                </div>
+                <div class="column">
+                    <img src="/assets/internal.jpg"  style="width:87%">
+                </div>    
+            </div>
+            <div class="row">
+                <img src="/assets/website_screencap1.jpg" style="width:92%">
+                <img src="/assets/website_screencap2.jpg" style="width:92%">
+            </div>
+            <p> Users can view the grow container and manually control the actuator system. Profiles of ideal growing conditions for popular mushrooms can also be selected.  </p>
+        </section>
+
+        <section id="documentation">
+            <h2>Schematics and Design</h2>
+            <img src="/assets/blockdiag.jpg"  class="center" style="width:75%">
+			<div class="row">
+				<div class = "column">
+					<img src="/assets/redesign.jpg"  style="width:100%;">
+				</div>
+				
+				<div class = "column">
+					  <img src="/assets/layout.jpg" style="width:100%;">
+				</div>
+			</div>
+        </section>
+
+        <h3> Anatomy of the Network-Based Control System</h3>
+        <p> The system is based around a REST API implemented in Node.js. The ESP polls the server at regular intervals, exchanging measurement values for control commands. </p>
+        
+        <img src="/assets/data_diag.jpg"   class="center" style="width:70%">
+        
+        <section id="timeline">
+            <h2>Project Timeline</h2>
+            <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1hZHZ4D1vuUzLmuaLcDA2iSnQV9VwN8svLFY2YuXkKGw&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+        </section>
+        
+        <section id="meet-the-team">
+            <h2>Meet the Team</h2>
+            <div class="team-member">
+                <img src="/assets/henry-mackay.jpg" alt="Henry Mackay">
+                <h3>Henry Mackay</h3>
+                <p>Henry is a senior studying Electrical Engineering at George Washington University. He is primarily focused on designing physical control circuits as well as the REST API backend in Node.js. He has a background in cybersecurity that enables him to design versatile systems with an exploit awareness.</p>
+                <a href="https://henrymackay.com">Henry's Personal Site</a>
+            </div>
+            <div class="team-member">
+                <img src="/assets/al.jpg" >
+                <h3>Alicia Ha</h3>
+                <p>Alicia is a senior majoring in Computer Engineering at George Washington University. She combines her passion for graphic design and background in programming to work on both the overall design and front-end development of the website.</p>
+            </div>
+            <div class="team-member">
+                <img src="/assets/kessa.jpg" >
+                <h3>Kessa Crean</h3>
+                <p>Kessa is a senior at George Washington University pursuing a major in Computer Engineering and a minor in Computer Science. Her project contributions include microcontroller programming and the management of intra-device communication using the I2C protocol. She also works on the physical CAD design of the enclosure.</p>
+            </div>
+            <!-- Add more team members as needed -->
+        </section>
+    </div>
+</body>
+</html>
